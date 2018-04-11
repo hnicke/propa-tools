@@ -5,10 +5,12 @@
 ## uploads given file to marvin, compiles on marvin, runs on marvin (while printing output to local stdout) and cleans up the mess afterwards
 ## supports ada, java, c, c++, haskell
 
-# enter your username here
-user=
+# enter your username here, or supply 'user' as environment variable
+#user=myusername
 # hint: install your public ssh key to omit the ssh password prompt
 [ $user ] || { echo "no marvin username supplied, aborting" && exit 1; }
+
+[ $1 ] || { echo "usage: mm <filename> [<arg> ...]";  exit 1; }
 
 absolute_filename=$1
 filename=$(basename $absolute_filename)
