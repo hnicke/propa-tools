@@ -3,9 +3,6 @@
 This repo contains tooling for the lecture Programmierparadigmen SS18, University of Stuttgart.
 
 #### mm
-```sh
-mm file arg1 arg2 ...
-```
 
 The mm script does the following:
 
@@ -13,6 +10,15 @@ The mm script does the following:
 - upload given file to marvin
 - compile and run on marvin according to the propa guidelines, while showing output locally
 - cleanup afterwards
+
+###### Usage:
+```sh
+mm FILE [UTILFILE]... [ARG]...
+
+**FILE**: the main source file (e.g., the file containing the main function)
+**UTILFILE**: a dependency
+**ARG**: An argument, passed to the compiled program at execution time
+```
 
 ###### Supported filetypes:
 - .java
