@@ -46,7 +46,7 @@ case $filename in
     *.c)
         echo "c++? [y/N]"
         read result
-        [ "$result" == y ] && make=$c || make=$cc
+        [ "$result" == y ] && make=$cc || make=$c
         outfile=a.out
         execute="./"
         ;;
