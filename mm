@@ -16,7 +16,7 @@ shift # now, $@ contains (only) all args for execution
 build_dir=pp_build
 
 cc="c++ -std=c++11 -Wall -Werror -pedantic -O3 $filename"
-c="gcc -std=c99 -pedantic -Wall -Wextra -Werror $filename"
+c="gcc -std=c99 -pedantic -Wall -Wextra -Werror $filename -lm"
 haskell="ghc -fwarn-tabs $filename"
 java="javac -Xlint:all -Xlint:-serial -Werror $filename"
 ada="gnatmake -gnat12 -gnatwa -gnatwl -gnaty3abcefhiklmnprt $filename"
