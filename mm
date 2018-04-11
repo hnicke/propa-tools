@@ -62,7 +62,6 @@ esac
 # transfer files to marvin
 scp $absolute_filename ${util_files[@]} $user@marvin.informatik.uni-stuttgart.de:~ >/dev/null
 
-sleep 20
 # compile, run and cleanup
 ssh $user@marvin.informatik.uni-stuttgart.de "\
     rm -rf $build_dir >/dev/null; 
